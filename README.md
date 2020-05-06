@@ -16,7 +16,8 @@ This technique is one of the basic techniques and thus used in many early face r
 <br>
 
 ## Dataset Used:
-The dataset used in this example is a preprocessed excerpt of the "Labeled Faces in the Wild", aka LFW_ Download (233MB).It is available as a part of **Sklearn API**.
+The dataset used in this example is a preprocessed excerpt of the "Labeled Faces in the Wild", aka LFW_ Download (233MB). 
+**The Dataset is available as a part of Sklearn API**.
 
 This dataset is a collection of JPEG pictures of famous people collected over the internet, all details are available on the official website:
 
@@ -34,9 +35,6 @@ Samples Total   | 13233
 Dimensionality  | 5828
    Features     | real, between 0 and 255
 ``` 
-## License & Reference:
-The dataset can be refered from **www.cs.umass.edu/lfw/** and is completely used as a part of algorithm understanding and experimentation.
-
 ## Steps Involved:
 - Importing Libraries
 - Loading the Dataset
@@ -47,7 +45,6 @@ The dataset can be refered from **www.cs.umass.edu/lfw/** and is completely used
 - * Using GridSearch to find best Parameters
 - Model Evaluation
 - Conclusion
-<br>
 
 ## Libraries Required:
 - Sklearn 
@@ -55,6 +52,9 @@ The dataset can be refered from **www.cs.umass.edu/lfw/** and is completely used
 - pandas
 - numpy
 
-## Concepts:
-- PCA(Eigen Faces) - Reference
+## Important Concepts:
+- PCA(Eigen Faces) - <a href="https://scikit-learn.org/stable/auto_examples/applications/plot_face_recognition.html">Reference</a>
 - SVM
+
+## License & Reference:
+The original dataset can be refered from **www.cs.umass.edu/lfw/** and here it is only used as a part of algorithm understanding and experimentation.
