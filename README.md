@@ -1,4 +1,4 @@
-#Facial Recognition using PCA and SVM:
+# Facial Recognition using PCA and SVM:
 ## Problem Description:
 Problem statement Facial recognition is an important and more preferred bio metric when compared to other bio metrics. One of the primary reason is that it requires no physical interaction on behalf of the user. For face recognition there are two types of comparisons:
 
@@ -7,26 +7,45 @@ Problem statement Facial recognition is an important and more preferred bio metr
 - Identification: This is where the system compares the given individual to all the other individuals in the database and recognizes that person.
 
 **In this project we implement the Identification system using Machine Learning concepts such as Principal Component Analysis (PCA) and Support Vector Machine (SVM).**
-
+This technique is one of the basic techniques and thus used in many early face recognition applications. But it has some caveats such as this algorithm required cropped face images with proper light and pose for training. It is very useful in learning the essence of PCA and dimensionality reduction.  
 
 <br>
 <p align="center">
-<img src="/" alt="facedataset" width="500" height="300">    
+<img src="https://raw.githubusercontent.com/samarth0174/PCA-MINIPROJECT/master/dataset_image.png" alt="faces" width="500" height="500">    
 </p>
 <br>
 
+## Dataset Used:
+The dataset used in this example is a preprocessed excerpt of the "Labeled Faces in the Wild", aka LFW_ Download (233MB).It is available as a part of **Sklearn API**.
+
+This dataset is a collection of JPEG pictures of famous people collected over the internet, all details are available on the official website:
+
+    http://vis-www.cs.umass.edu/lfw/
+
+Each picture is centered on a single face. The typical task is called Face Verification: given a pair of two pictures, a binary classifier must predict whether the two images are from the same person.
+
+An alternative task, Face Recognition or Face Identification is: given the picture of the face of an unknown person, identify the name of the person by referring to a gallery of previously seen pictures of identified persons.
+
+Both Face Verification and Face Recognition are tasks that are typically performed on the output of a model trained to perform Face Detection. The most popular model for Face Detection is called Viola-Jones and is implemented in the OpenCV library. The LFW faces were extracted by this face detector from various online websites.
+
+```
+   Classes      | 5749
+Samples Total   | 13233
+Dimensionality  | 5828
+   Features     | real, between 0 and 255
+``` 
+## License & Reference:
+The dataset can be refered from **www.cs.umass.edu/lfw/** and is completely used as a part of algorithm understanding and experimentation.
+
 ## Steps Involved:
 - Importing Libraries
-- Importing the Dataset
-- Exploratory Data Analysis
-> * Univariate Analysis
-> * Bivariate Analysis
-- Data preprocessing 
-> * Outlier Handling
-> * Feature Selection and Standardization
-- Modeling 
-- Evaluation
-- Fine tuning using GridSearchCV
+- Loading the Dataset
+- Data Exploration
+- Splitting the dataset 
+- Compute PCA(eigen faces) 
+- Train a SVM classification model
+- * Using GridSearch to find best Parameters
+- Model Evaluation
 - Conclusion
 <br>
 
@@ -35,54 +54,7 @@ Problem statement Facial recognition is an important and more preferred bio metr
 - Matplotlib
 - pandas
 - numpy
-- Seaborn
-- scipy
 
-## Data Attribute Information
-**Given is the attribute name, attribute type, the measurement unit and a brief description. The number of rings is the value to predict: Since its a Continuous Variable therefore a Regression Problem.**
-```
-Name / Data Type / Measurement Unit / Description ¶
-
-Sex / nominal / -- / M, F, and I (infant)
-
-Length / continuous / mm / Longest shell measurement
-
-Diameter / continuous / mm / perpendicular to length
-
-Height / continuous / mm / with meat in shell
-
-Whole weight / continuous / grams / whole abalone
-
-Shucked weight / continuous / grams / weight of meat
-
-Viscera weight / continuous / grams / gut weight (after bleeding)
-
-Shell weight / continuous / grams / after being dried
-
-Rings / integer / -- / +1.5 gives the age in years
-```
-<br>
-
-##  Machine learning models:
-
-```
-    Linear Regressor
-    SVR
-    RandomForest Regressor
-    ElasticNet Regression
-    Lasso Regression
-    Kernel Ridge Regression
-    Gradient Boosting Regression
-    XGBoost
-    LightGBM
-    can also try any other classifiers.
-   
-``` 
-- use Gridsearch CV to tune algos
-
-## License & References:
-- The original dataset can be acessed at <a href="https://archive.ics.uci.edu/ml/datasets/abalone">UCI REPOSITORY</a>
-```
-Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science. 
-```
-
+## Concepts:
+- PCA(Eigen Faces) - Reference
+- SVM
